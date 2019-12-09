@@ -145,7 +145,6 @@ namespace Windows.UI.Xaml
 		}
 		#endregion
 
-#if __ANDROID__ || __WASM__ // Temp onl, this will be shared on all pltaforms soon
 		public GeneralTransform TransformToVisual(UIElement visual)
 			=> new MatrixTransform { Matrix = new Matrix(GetTransform(from: this, to: visual)) };
 
@@ -213,7 +212,6 @@ namespace Windows.UI.Xaml
 
 			return matrix;
 		}
-#endif
 
 		#region IsHitTestVisible Dependency Property
 
