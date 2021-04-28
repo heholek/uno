@@ -1,0 +1,28 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  labels:
+  - kind/dependency
+  - do-not-merge/work-in-progress
+  ignore:
+  - dependency-name: StreamJsonRpc
+    versions:
+    - 2.6.121
+    - 2.7.70
+  - dependency-name: Uno.Core
+    versions:
+    - 2.1.0
+    - 2.2.0
+  - dependency-name: Microsoft.CodeAnalysis.VisualBasic.Workspaces
+    versions:
+    - 3.8.0
+  - dependency-name: Microsoft.CodeAnalysis.CSharp.Workspaces
+    versions:
+    - 3.8.0
+  - dependency-name: Microsoft.VisualStudio.Imaging
+    versions:
+    - 16.7.30329.63
